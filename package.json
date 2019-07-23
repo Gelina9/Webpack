@@ -1,0 +1,26 @@
+{
+  "name": "Webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"webpack-dev-server --config=config/webpack.dev.js",
+    "build":"webpack --config=config/webpack.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gelina9/Webpack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gelina9/Webpack/issues"
+  },
+  "homepage": "https://github.com/Gelina9/Webpack#readme",
+  "dependencies": {
+    "webpack": "^4.37.0",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
