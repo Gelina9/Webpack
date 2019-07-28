@@ -1,5 +1,26 @@
 {
+    "presets":[
+        [
+            "@babel/preset-env",
+            {
+                "targets":{
+                    //转化支持的浏览器版本
+                    "browsers":"last 2 versions"
+                },
+                "debug":true
+            }
+        ]
+    ],
     "plugins":[
-        "transform-es2015-arrow-functions"
+        //解决promise打包后对环境变量的污染
+        [
+            "@babel/plugin-transform-runtime",
+            {
+              "corejs": 2,
+              "helpers": true,
+              "regenerator": true,
+              "useESModules": false
+            }
+          ]
     ]
 }

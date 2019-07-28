@@ -33,6 +33,41 @@ module.exports = {
                    } 
                 ]
             },
+            //html loader
+            {
+                test:/\.html$/,
+                use:[
+                    //起名
+                   {
+                       loader:"file-loader",
+                       options:{
+                         name:"[name].html"
+                       }
+                   },
+                   //跟bundlw.js分离，不会融在一起
+                   {
+                       loader:"extract-loader"
+                   },
+                   {
+                        loader:"html-loader",
+                        options:{
+                            attrs:["img:src"]
+                        }
+                   } 
+                ]
+            },
+            //图片loader 
+            {
+                test:/\.(jpg|jpeg|png|gif)$/,
+                use:[
+                    {
+                        loader:"file-loader",
+                        options:{
+                            name:"imgs/[name].[ext]"
+                        }
+                    }
+                ]
+            },
             //js loader
             {
                 test:/\.js$/,
